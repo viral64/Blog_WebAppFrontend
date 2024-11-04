@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 const BlogSection = (props) => {
-  console.log(props.data[0]);
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">
@@ -11,26 +11,23 @@ const BlogSection = (props) => {
           />
 
           <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6">
-            <a
-              href="#"
+            <Link
+              to={`blog/${props.data.blogId}`}
               className="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
             >
-              {props.data[0].title}
-            </a>
+              {props.data.title}
+            </Link>
 
             <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              veritatis sint autem nesciunt, laudantium quia tempore delect
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              veritatis sint autem nesciunt, laudantium quia tempore delect
+              {props.data.description}
             </p>
 
-            <a
-              href="#"
+            <Link
+              to={`blog/${props.data.blogId}`}
               className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
             >
               Read more
-            </a>
+            </Link>
 
             <div className="flex items-center mt-6">
               <img
@@ -41,7 +38,7 @@ const BlogSection = (props) => {
 
               <div className="mx-4">
                 <h1 className="text-sm text-gray-700 dark:text-gray-200">
-                  Viral Devmurari
+                  {props.data.username}
                 </h1>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Lead Developer

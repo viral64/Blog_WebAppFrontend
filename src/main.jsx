@@ -12,6 +12,8 @@ import Layout from "./Layout";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import User from "./Components/User";
+import BlogDetail from "./Components/BlogDetail";
+import Login from "./Components/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +21,9 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="About" element={<About />} />
       <Route path="Contact" element={<Contact />} />
-      <Route path="user/:userid" element={<User />} />
+      <Route path="blog/:id" element={<BlogDetail />} />
+      <Route path="login" element={<Login />} />
+      <Route path="User" element={<User />} />
     </Route>
   )
 );
