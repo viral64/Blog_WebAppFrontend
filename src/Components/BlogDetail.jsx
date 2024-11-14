@@ -7,7 +7,7 @@ export default function BlogDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://localhost:7211/api/blog/${id}`)
+    fetch(`http://BlogWeb.somee.com/api/blog/${id}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

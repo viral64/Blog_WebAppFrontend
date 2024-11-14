@@ -14,6 +14,7 @@ import Contact from "./Components/Contact";
 import User from "./Components/User";
 import BlogDetail from "./Components/BlogDetail";
 import Login from "./Components/Login";
+import AddBlog from "./Components/AddBlog";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="blog/:id" element={<BlogDetail />} />
       <Route path="login" element={<Login />} />
       <Route path="User" element={<User />} />
+      <Route path="AddBlog" element={<AddBlog />} />
     </Route>
   )
 );

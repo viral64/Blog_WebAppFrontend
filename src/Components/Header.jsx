@@ -39,9 +39,7 @@ export default function Header() {
         </Link>
         <div className="flex items-center lg:order-2">
           {flag ? (
-            <span className="text-gray-800 dark:text-white mr-4">
-              Hey, {username}
-            </span>
+            <span className="text-gray-800 dark:text-white mr-4"></span>
           ) : (
             <Link
               to="/login"
@@ -50,6 +48,35 @@ export default function Header() {
               Log in
             </Link>
           )}
+          <NavLink
+            className="text-white bg-primary-700 hover:bg-primary-800  font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5  "
+            to="/AddBlog"
+          >
+            <div className="mt-2 flex gap-2">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-label="Write"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M14 4a.5.5 0 0 0 0-1zm7 6a.5.5 0 0 0-1 0zm-7-7H4v1h10zM3 4v16h1V4zm1 17h16v-1H4zm17-1V10h-1v10zm-1 1a1 1 0 0 0 1-1h-1zM3 20a1 1 0 0 0 1 1v-1zM4 3a1 1 0 0 0-1 1h1z"
+                  ></path>
+                  <path
+                    stroke="currentColor"
+                    d="m17.5 4.5-8.458 8.458a.25.25 0 0 0-.06.098l-.824 2.47a.25.25 0 0 0 .316.316l2.47-.823a.25.25 0 0 0 .098-.06L19.5 6.5m-2-2 2.323-2.323a.25.25 0 0 1 .354 0l1.646 1.646a.25.25 0 0 1 0 .354L19.5 6.5m-2-2 2 2"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <span>Write</span>
+              </div>
+            </div>
+          </NavLink>
           <NavLink
             to="/User"
             className="text-white bg-primary-700 hover:bg-primary-800  font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 "

@@ -7,7 +7,7 @@ export default function User() {
 
   useEffect(() => {
     const userId = localStorage.getItem("id");
-    fetch(`https://localhost:7211/api/Users/GetUserDetails?id=${userId}`)
+    fetch(`http://BlogWeb.somee.com/api/Users/GetUserDetails?id=${userId}`)
       .then((response) => response.json())
       .then((data) => {
         setUserData(data);
@@ -22,7 +22,7 @@ export default function User() {
   const [GetUserDetails, setUserDetails] = useState([]);
   useEffect(() => {
     const userId = localStorage.getItem("id");
-    fetch(`https://localhost:7211/api/Users/${userId}`)
+    fetch(`http://BlogWeb.somee.com/api/Users/${userId}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

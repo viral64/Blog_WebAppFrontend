@@ -6,7 +6,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://localhost:7211/api/Blog")
+    fetch("http://BlogWeb.somee.com/api/Blog")
       .then((response) => response.json())
       .then((data) => {
         setData(data);

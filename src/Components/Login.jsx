@@ -16,7 +16,7 @@ const Login = () => {
     console.log(email, password);
 
     try {
-      const response = await fetch("https://localhost:7211/api/Users/login", {
+      const response = await fetch("http://BlogWeb.somee.com/api/Users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
